@@ -17,5 +17,8 @@
     "url": "https://github.com/dee-d-dev/test-nginx/issues"
   },
   "homepage": "https://github.com/dee-d-dev/test-nginx#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express-rate-limit": "^6.6.0"
+  }
 }
