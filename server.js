@@ -3,6 +3,8 @@ const app = express();
 
 app.use(express.json());
 
+const port = 4000;
+
 function handleOperation(operation_type, x, y) {
   switch (operation_type) {
     case "addition":
@@ -30,6 +32,6 @@ app.post("/calculate", (req, res) => {
   });
 });
 
-app.listen(4000, () => {
-  console.log("listening on 4000");
+app.listen(port, () => {
+  console.log(`running on the ${port}`);
 });
