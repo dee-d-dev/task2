@@ -19,7 +19,7 @@ function handleOperation(operation_type, x, y) {
   }
 }
 
-app.post("/calculate", (req, res) => {
+app.post("/", (req, res) => {
   const { operation_type, x, y } = req.body;
 
   let result = handleOperation(operation_type, x, y);
