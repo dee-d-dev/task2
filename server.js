@@ -1,9 +1,8 @@
 const express = require("express");
 const app = express();
+require("dotenv").config();
 
 app.use(express.json());
-
-const port = 4000;
 
 function handleOperation(operation_type, x, y) {
   switch (operation_type) {
@@ -32,6 +31,6 @@ app.post("/calculate", (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`running on the ${port}`);
+app.listen(process.env.PORT || 8000, () => {
+  console.log(`running on the ${process.env.PORT || 5000}`);
 });
